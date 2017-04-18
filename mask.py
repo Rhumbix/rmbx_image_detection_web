@@ -6,7 +6,7 @@ def mask_for_yellow(image):
     img = cv2.imread(image)
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     lower_blue = np.array([40,50,50])
-    upper_blue = np.array([75,180,180])
+    upper_blue = np.array([95,180,180])
     mask = cv2.inRange(hsv, lower_blue, upper_blue)
     cv2.imwrite("static/img/static_001.jpg", mask)
 

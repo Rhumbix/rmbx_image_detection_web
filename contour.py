@@ -12,7 +12,7 @@ def contour(image, std):
     imgray = cv2.cvtColor(blur,cv2.COLOR_BGR2GRAY)
     cv2.imwrite('static/img/static_005.jpg', imgray)
     #thresh = cv2.adaptiveThreshold(imgray, 255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,7,8)
-    ret,thresh = cv2.threshold(imgray,127,255,0)
+    ret,thresh = cv2.threshold(imgray,80,255,0)
     #thresh = cv2.Canny(imgray, 20,100)
     cv2.imwrite('static/img/static_006.jpg', thresh)
     im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
